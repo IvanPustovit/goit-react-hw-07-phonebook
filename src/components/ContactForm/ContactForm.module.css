@@ -1,0 +1,16 @@
+.form {
+  display: block;
+  border: solid 1px black;
+  width: 400px;
+}
+
+.label-name {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.label-name input {
+  display: block;
+  padding-top: 5px;
+}

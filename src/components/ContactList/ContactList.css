@@ -1,0 +1,59 @@
+.list-item {
+  width: 400px;
+
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.list-item-enter-active {
+  animation: task 250ms ease-in alternate-reverse;
+}
+
+.list-item-exit-active {
+  animation-duration: 250ms;
+  animation-name: delete;
+}
+
+.list-item p {
+  margin: 0;
+}
+
+.delete {
+  margin-left: 10px;
+  width: 20px;
+  padding: 0;
+  background-color: brown;
+  border: none;
+  border-radius: 25%;
+  height: 20px;
+  color: beige;
+}
+
+@keyframes task {
+  0% {
+    transform: scaleX(0);
+  }
+  30% {
+    opacity: 0.7;
+    transform: scaleX(50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(100%);
+  }
+}
+
+@keyframes delete {
+  0% {
+    transform: scaleY(150%);
+  }
+  30% {
+    opacity: 1;
+    transform: scaleY(50%);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scaleY(0);
+  }
+}

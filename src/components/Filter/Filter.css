@@ -1,0 +1,39 @@
+.filter {
+  font-size: 20px;
+}
+
+.filter-enter-active {
+  animation: filter 250ms ease-in alternate-reverse;
+}
+
+.filter-exit-active {
+  animation-duration: 250ms;
+  animation-name: noFilter;
+}
+@keyframes filter {
+  0% {
+    transform: scaleX(0);
+  }
+  30% {
+    opacity: 0.7;
+    transform: scaleX(50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(100%);
+  }
+}
+
+@keyframes noFilter {
+  0% {
+    transform: scaleY(150%);
+  }
+  30% {
+    opacity: 1;
+    transform: scaleY(50%);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scaleY(0);
+  }
+}
