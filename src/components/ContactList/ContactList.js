@@ -1,8 +1,9 @@
 import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useSelector } from "react-redux";
-import Loader from "react-loader-spinner";
+
 import Contact from "../Contact/Contact";
+import LoaderComponent from "../Loader/Loader";
 
 import "./ContactList.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -27,13 +28,7 @@ const ContactList = () => {
   return (
     <div>
       {loader ? (
-        <Loader
-          type="Puff"
-          color="#00BFFF"
-          height={100}
-          width={100}
-          timeout={3000}
-        />
+        <LoaderComponent />
       ) : (
         <TransitionGroup component="ul">
           {filteredContacts.length
@@ -59,13 +54,7 @@ const ContactList = () => {
                   unmountOnExit
                 >
                   <li className="list-item">
-                    <Loader
-                      type="Puff"
-                      color="#00BFFF"
-                      height={100}
-                      width={100}
-                      timeout={3000} //3 secs
-                    />
+                    <LoaderComponent />
                     <Contact {...contact} />
                   </li>
                 </CSSTransition>
